@@ -1,0 +1,47 @@
+﻿@Model  List<ASP_test1.Controllers.Models.User>
+   
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h1>Home Page</h1>
+    @{
+        <div>
+            
+            <h1>User</h1>
+            
+        </div>
+        <div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            Id
+                        </th>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Email
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{ 
+                        foreach (var user in Model)
+                        {
+                                        <tr>
+                                            <td>@user.Id</td>
+                                            <td>@user.Name</td>
+                                            <td>@user.Email</td>
+
+
+                                        </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</body>
+</html>
